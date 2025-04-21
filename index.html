@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords"
+          content="Uni3C">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uni3C</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./img/logo.jpg">
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
+
+
+<body>
+
+
+<section class="hero teaser ">
+    <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <img src="img/logo.jpg" style="height:170px; margin-bottom: -10px;"></img>
+                    <h1 class="title is-1 publication-title has-text-centered" style="font-size: 2.5rem; line-height: 1.3;">
+                        Unifying Precisely 3D-Enhanced Camera and Human Motion Controls for Video Generation
+                    </h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                          <a href="https://ewrfcas.github.io/">Chenjie Cao</a><sup>1,2,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=80d4v4kAAAAJ&hl=zh-CN&oi=ao">Jingkai Zhou</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=WXGg2rgAAAAJ&hl=zh-CN&oi=ao">Shikai Li</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=3-Hz9BgAAAAJ&hl=zh-CN&oi=ao">Jingyun Liang</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=b1Q-k20AAAAJ">Chaohui Yu</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=WCRGTHsAAAAJ">Fan Wang</a><sup>1</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://istbi.fudan.edu.cn/lnen/info/1157/2875.htm ">Xiangyang Xue</a><sup>2</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="http://yanweifu.github.io/">Yanwei Fu</a><sup>2</sup>,
+                        </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Alibaba DAMO Academy, <sup>2</sup>Fudan University, <sup>3</sup>Hupan Lab</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                          <span class="link-block">
+                            <a href=""
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="ai ai-arxiv"></i>
+                              </span>
+                              <span>arXiv</span>
+                            </a>
+                          </span>
+                          <span class="link-block">
+                            <a href="https://github.com/ewrfcas/Uni3C"
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="fab fa-github"></i>
+                              </span>
+                              <span>Code and Model (coming soon)</span>
+                              </a>
+                          </span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: left;">
+            <div id="results-carousel-horizontal" class="carousel results-carousel">
+
+                <!-- 每个视频和字幕的包裹容器 -->
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/cam_motion_ctrl.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Unified camera and human motion control</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/teaser_camera.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Precise camera control</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/orbit_360.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Orbit 360 camera control</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/motion_transfer.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Motion transfer with camera control</div>
+                </div>
+
+                <!-- 其他视频项... -->
+
+            </div>
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                Given a single-view image across various domains (real-world, text-to-image, animation), the proposed <b>Uni3C</b> can generate impressive videos under arbitrary camera trajectories, human motion characters or both of these conditions. Uni3C further supports the camera-controlled motion transfer. Note that <b>no joint training is required</b> for Uni3C.
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* 添加字幕样式 */
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+.video-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    backdrop-filter: blur(2px); /* 背景模糊效果 */
+}
+
+/* 如果是轮播组件，可能需要调整间距 */
+.carousel {
+    padding-bottom: 1px; /* 为字幕留出空间 */
+}
+</style>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        Camera and human motion controls have been extensively studied for video generation, but existing approaches typically address them separately, suffering from limited data with high-quality annotations for both aspects.
+                        To overcome this, we present <b>Uni3C</b>, a unified 3D-enhanced framework for precise controls of both camera and human motion in video generation.
+                        Uni3C includes two key contributions.
+                        First, we propose a plug-and-play control module trained with a frozen video generative backbone, PCDController, which utilizes unprojected point clouds from monocular depth to achieve accurate camera control.
+                        By leveraging the strong 3D priors of point clouds and the powerful capacities of video foundational models, PCDController shows impressive generalization, performing well regardless of whether the inference backbone is frozen or fine-tuned.
+                        This flexibility enables different modules of Uni3C to be trained in specific domains, \textit{i.e.}, either camera control or human motion control, reducing the dependency for jointly annotated data.
+                        Second, we propose a jointly aligned 3D world guidance for the inference phase that seamlessly integrates both scenic point clouds and SMPL-X characters to unify the control signals for camera and human motion, respectively.
+                        Extensive experiments confirm that PCDController enjoys strong robustness in driving camera motion for fine-tuned backbones of video generation.
+                        Uni3C substantially outperforms competitors in both camera controllability and human motion quality. Additionally, we collect tailored validation sets featuring challenging camera movements and human actions to validate the effectiveness of our method.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="overview" width="70%" src="./img/uni3c_conditions.jpg"/>
+                        </div>
+                        <center><b>The assignment of multi-modal conditions for Uni3C.</b></center>
+                    </div>
+                    <br>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="method" width="70%" src="./img/pipeline.jpg"/>
+                        </div>
+                        <b>The overview pipeline of PCDController.</b> PCDController is built as a lightweight DiT trained from scratch. We first obtain the point clouds via the monocular depth extracted from the first view. Then, the point clouds are warped and rendered into the video. The input conditions for PCDController comprise rendered point clouds, Plücker ray, and the noisy latent.
+                        Note that only the PCDController and camera encoder are trainable in our framework.
+                    </div>
+                    <br>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="alignment" width="80%" src="./img/world_guidance.jpg"/>
+                        </div>
+                        <b>The overview of global 3D world guidance.</b> (a) We first align the SMPL-X characters from the human world space to the environment world space comprising dense point clouds. (b) GeoCalib is used to calibrate the gravity direction of SMPL-X. (c) The rigid transformation coefficients are employed to align the whole SMPL-X sequence. We re-render all aligned conditions under specific camera trajectories as the global 3D world guidance.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">More impressive camera control results</h2>
+            <div id="camera-control" class="carousel results-carousel">
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/camera_control_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/camera_control_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/camera_control_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/camera_control_4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/orbit_360_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/camera_control/orbit_360_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#camera-control', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">More unified (human and camera) control results</h2>
+            <div id="union-control" class="carousel results-carousel">
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/union_ctrl/union_ctrl_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/union_ctrl/union_ctrl_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/union_ctrl/union_ctrl_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/union_ctrl/union_ctrl_4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#union-control', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Animate anyone under any viewpoints with any motions</h2>
+            <div id="cmp-point-carousel-horizontal" class="carousel results-carousel">
+
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_1.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_2.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_3.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_4.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_5.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/union_ctrl/motion_transfer_6.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-point-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
