@@ -481,6 +481,64 @@
 <section class="hero teaser is-light is-small">
     <div class="hero-body">
         <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Ablation studies</h2>
+            <div id="ablation-study" class="carousel results-carousel">
+
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/ablation/ablation_qualitative1.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/ablation/ablation_qualitative2.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/ablation/ablation_qualitative3.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/ablation/ablation_qualitative4.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#ablation-study', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
             <h2 class="title is-3">Grammy slow motion moments</h2>
             <div id="grammy" class="carousel results-carousel">
 
