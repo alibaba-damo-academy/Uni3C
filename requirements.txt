@@ -10,6 +10,7 @@ h5py
 trimesh
 einops
 roma
+ultralytics
 xfuser[flash-attn]
 opencv-python==4.11.0.86
 imageio[ffmpeg]
