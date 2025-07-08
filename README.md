@@ -20,6 +20,7 @@
 - [x] FSDP + Sequential parallel
 - [x] HumanPose-WorldPointClouds alignment
 - [x] Unified control inference code
+- [ ] Hamer alignment
 
 ## Setup
 
