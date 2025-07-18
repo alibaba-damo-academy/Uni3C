@@ -10,6 +10,7 @@ h5py
 trimesh
 einops
 roma
+decord
 ultralytics
 xfuser[flash-attn]
 opencv-python==4.11.0.86
