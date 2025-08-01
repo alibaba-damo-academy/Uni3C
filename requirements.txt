@@ -1,5 +1,3 @@
-torch
-torchvision
 easydict
 omegaconf
 jsonlines
