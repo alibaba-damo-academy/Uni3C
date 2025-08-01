@@ -33,6 +33,7 @@ apt-get update && apt-get install tmux ffmpeg libsm6 libxext6 libglm-dev -y
 conda create -n uni3c python=3.10
 conda activate uni3c
 
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
 pip install carvekit --no-deps
 
@@ -51,7 +52,7 @@ cd ../..
 
 ### Stage 1. Rendering pointclouds and video
 
-There are 7 parameters to control the camera in free.
+There are 7 parameters to control the camera freely.
 
 Rotation parameters:
 - `d_r`: Distance from the camera to the foreground center, default is 1.0, range 0.25 to 2.5.
