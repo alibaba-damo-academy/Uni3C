@@ -5,7 +5,7 @@ import os
 import torch
 import torch.distributed as dist
 from diffusers.models import AutoencoderKLWan
-from diffusers.schedulers import FlowMatchEulerDiscreteScheduler
+from diffusers.schedulers import UniPCMultistepScheduler
 from diffusers.utils import export_to_video
 from huggingface_hub import hf_hub_download
 from omegaconf import OmegaConf
@@ -118,7 +118,7 @@ if __name__ == '__main__':
         image_processor=CLIPImageProcessor.from_pretrained(base_model_id, subfolder="image_processor"),
         transformer=transformer,
         vae=vae,
-        scheduler=FlowMatchEulerDiscreteScheduler.from_pretrained(base_model_id, subfolder="scheduler")
+        scheduler=UniPCMultistepScheduler.from_pretrained(base_model_id, subfolder="scheduler")
     )
 
     # replace this with pipe.to("cuda") if you have sufficient VRAM

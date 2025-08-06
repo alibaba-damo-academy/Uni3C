@@ -7,6 +7,7 @@
 <img src='https://img.shields.io/badge/Project-page-orange'></a> 
 
 ## News
+- **2025-08-06**: Bug fixed: using `UniPCMultistepScheduler` instead of `FlowMatchEulerDiscreteScheduler`.
 - **2025-05-30**: We updated codes for unified inference.
 - **2025-05-28**: We updated codes of alignment for human pose and world point clouds.
 - **2025-05-27**: We support FSDP and sequential parallel inference with multiple GPUs (`pip install xfuser[flash-attn]`).

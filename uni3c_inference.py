@@ -12,7 +12,7 @@ from src.models.uni3c import RealisDanceDiT
 from src.pipelines.pipeline_uni3c import RealisDanceDiTPipeline
 from src.utils import set_seed, create_logger, is_main_process
 from src.fsdp import hook_for_multi_gpu_inference
-from diffusers.schedulers import FlowMatchEulerDiscreteScheduler
+from diffusers.schedulers import UniPCMultistepScheduler
 from src.dataset import load_dataset
 
 
@@ -81,7 +81,7 @@ def main():
         image_processor=CLIPImageProcessor.from_pretrained(base_model_id, subfolder="image_processor"),
         transformer=transformer,
         vae=vae,
-        scheduler=FlowMatchEulerDiscreteScheduler.from_pretrained(model_id, subfolder="scheduler")
+        scheduler=UniPCMultistepScheduler.from_pretrained(model_id, subfolder="scheduler")
     )
     if args.save_gpu_memory:
         logger.warning("Enable sequential cpu offload which will be super slow.")
